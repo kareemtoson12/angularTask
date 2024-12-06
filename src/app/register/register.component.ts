@@ -4,21 +4,22 @@ import { UserService } from '../services/user.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css',
+  styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent {
-  username: string = '';
-  password: string = '';
-  errorMessage: string = '';
+  username = '';
+  password = '';
+  errorMessage = '';
 
   constructor(private userService: UserService) {}
 
-  registerUser() {
-    if (this.userService.isUsernameTaken(this.username)) {
-      this.errorMessage = 'Username already exists!';
-    } else {
+  registerUser(): void {
+    this.errorMessage = this.userService.isUsernameTaken(this.username)
+      ? 'Username already exists!'
+      : '';
+    
+    if (!this.errorMessage) {
       this.userService.addUser(this.username, this.password);
-      this.errorMessage = '';
     }
   }
 }
