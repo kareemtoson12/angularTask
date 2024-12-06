@@ -1,0 +1,77 @@
+/* Reset and basic styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sleek font */
+    background-color: #f4f7fb; /* Light, soft background */
+    color: #333;
+    transition: background-color 0.3s ease; /* Smooth background transition */
+  }
+  
+  header {
+    background-color:#0056b3; /* Lively red */
+    color: white;
+    padding: 1.5rem 0; /* Increased padding for header */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem; /* Wider padding for more space */
+  }
+  
+  .logo {
+    font-size: 2rem; /* Larger logo for impact */
+    font-weight: bold;
+    letter-spacing: 1px; /* Slight spacing for logo text */
+    text-transform: uppercase; /* Bold and clean typography */
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem; /* Slightly larger text */
+    font-weight: 500; /* Slight boldness */
+    transition: color 0.3s ease, transform 0.2s ease; /* Smooth color and hover transition */
+  }
+  
+  .nav-link:hover {
+    color: #ffdd57; /* Soft yellow for hover effect */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+  }
+  
+  /* Main content styles */
+  main {
+    padding: 3rem 2rem; /* Increased padding for main content */
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: #ffffff; /* White background for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    border-radius: 8px; /* Smooth border radius for rounded corners */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column; /* Stack navbar items on smaller screens */
+      align-items: flex-start;
+    }
+  
+    .nav-links {
+      flex-direction: column; /* Stack links vertically */
+      gap: 1rem;
+    }
+  
+    .logo {
+      font-size: 1.8rem; /* Slightly smaller logo for mobile */
+    }
+  }
+  

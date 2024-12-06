@@ -1,0 +1,36 @@
+/* Container styles for the user list */
+ul {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+  }
+  
+  /* Individual list item styles */
+  li {
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+  }
+  
+  /* Highlight items with passwords shorter than 5 characters */
+  li[ngStyle*="red"] {
+    color: red !important;
+  }
+  
+  /* Hover effect */
+  li:hover {
+    background-color: #f2f2f2;
+    transform: translateX(5px);
+  }
+  
+  /* Last list item without bottom border */
+  li:last-child {
+    border-bottom: none;
+  }
+  
